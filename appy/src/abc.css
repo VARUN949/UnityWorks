@@ -1,0 +1,169 @@
+/* ------------Navbar-------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+
+
+
+:root {
+  --font-primary: "Raleway", sans-serif;
+  --color-primary:#FFBABA
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body{
+    /* background-color: black; */
+   
+}
+
+
+.nav-items ul li{
+    list-style: none;
+    margin:0px 43px
+}
+.nav-items ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-family: var(--font-primary);
+}
+.menu_icon{
+    margin-right: 22px;
+}  
+
+
+
+.navbar {
+    width: 100vw;
+    height: 8vh;
+    /* background-color: #CC6767; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 61px;
+  }
+.nav-logo{
+    /* background-color: brown; */
+    font-family: var(--font-primary);
+    font-size: 26px;
+    color:white;
+    margin-left: 34px;
+}
+.nav-items{
+    width: auto;
+    /* background-color: aqua; */
+    /* margin-right: 220px; */
+    margin-left: 13vw;
+}
+.nav-items ul{
+    display: flex;
+}
+
+.nav-items ul li{
+    list-style: none;
+    margin: 0px 2.5vw;
+    font-size: 15px;
+    font-family: var(--font-primary);
+   
+}
+.nav-items ul li a{
+    text-decoration: none;
+    color:white
+}
+
+.login-buttons{
+    /* background-color: blueviolet; */
+    width: auto;
+    margin-right: 40px;
+    display: flex;
+}
+
+.login-buttons button{
+    width: 113px;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    
+}
+.button1{
+    margin-right: 5vw;
+    color: #CC6767;
+    border-color: white;
+    background-color: white;
+    border-style: none;
+    box-shadow: 0 0px 1px rgb(0 0 0 / 35%), 0 3px 6px rgb(0 0 0 / 35%);
+    font-weight: bold;
+}
+
+
+.button2{
+    border-color: white;
+    background-color: #B13333;
+    border-style: none;
+    color: white;
+    box-shadow: 0 0px 1px rgb(0 0 0 / 35%), 0 3px 6px rgb(0 0 0 / 35%);
+    font-weight: 500;
+}
+
+.menu_icon{
+    margin-right: 22px;
+}
+.menu_icon img{
+    height: 34px;
+    width: 36px;
+}
+.login_menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+ @media screen and (max-width:576px){
+    .nav-items,.login-buttons{
+        display: none;
+    }
+    
+    .menu_icon{
+        display: block;
+    }
+    .nav-logo{
+        margin-left: 12px;
+    }
+    
+}
+
+@media screen and (min-width:577px) and  (max-width:1012px) {
+    .nav-items{
+        display: none;
+    }
+    .login-buttons{
+        margin-left: 15vw;
+        margin-right: 21px;
+    }
+    .nav-logo{
+        margin-left: 5px;
+    }
+    .menu_icon{
+        display: block;
+    }
+    
+}
+@media screen and (min-width:1012px) {
+    .nav-items{
+        display: flex;
+    }
+    .menu_icon{
+        display: none;
+    }
+    
+}
+
+/* ----------home_1--------------- */
+ 
+
