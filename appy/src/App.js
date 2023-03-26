@@ -6,8 +6,8 @@ import Home_2 from './component/Home_2'
 function App() {
   return (
       <div>
-        <Home_1 />
-        <Home_2 />
+        <Home_1/>
+      <Home_2 />
       </div>
   );
 }
