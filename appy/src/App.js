@@ -8,14 +8,16 @@ import Home_4 from "./component/Home_4";
 import Home_5 from "./component/Home_5";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./component/Login";
+import Navbar from"./component/Navbar"
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+        <Navbar></Navbar>
         <Routes>
-          <Route path="/" element={<><Home_1 /><Home_2 /><Home_3 /><Home_4 /><Home_5 /></>} />
-          <Route path="Login" element={<><Login/></>}></Route>
+          <Route path="/Home" element={<><Home_1 /><Home_2 /><Home_3 /><Home_4 /><Home_5 /></>} />
+          <Route path="/Login" element={<><Login/></>}></Route>
 
 
         </Routes>

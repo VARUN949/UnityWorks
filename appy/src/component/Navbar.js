@@ -1,25 +1,19 @@
 import React from "react";
 import img from "../icons/menu_white.png";
-// import "../abc.css";
 import { Link } from "react-router-dom";
-
-
-
 
 export default function navbar() {
   window.addEventListener("scroll", () => {
-    console.log("abc");
-
     if (window.pageYOffset < 560 && window.innerWidth > 1012) {
       console.log(window.pageYOffset);
-      console.log("varun");
+
       document.getElementById("navbar_id").style.background =
         "linear-gradient(to left, white 28vw, #CC6767 28vw)";
     } else if (window.pageYOffset > 560) {
       document.getElementById("navbar_id").style.background = "#CC6767";
-      console.log("vv");
     }
   });
+
   return (
     <>
       <div className="navbar" id="navbar_id">
@@ -30,16 +24,16 @@ export default function navbar() {
         <div className="nav-items">
           <ul>
             <li>
-              <a href="/Home">Home</a>
+              <Link to="/Home">Home</Link>
             </li>
             <li>
-              <a href="/">Program</a>
+              <Link to="/">Program</Link>
             </li>
             <li>
-              <a href="/">Donor</a>
+              <Link to="/">Donor</Link>
             </li>
             <li>
-              <a href="/">Contact</a>
+              <Link to="/">Contact</Link>
             </li>
           </ul>
         </div>

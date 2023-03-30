@@ -74,7 +74,6 @@ body {
   align-items: center;
   justify-content: center;
   font-family: var(--font-primary);
-  
 }
 .button1 {
   margin-right: 5vw;
@@ -86,7 +85,7 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-.Login-buttons_Link{
+.Login-buttons_Link {
   text-decoration: none;
 }
 
@@ -899,23 +898,273 @@ p:nth-child(4) {
 }
 
 @media screen and (max-width: 576px) {
-  .Home_5_left_content{
+  .Home_5_left_content {
     width: 60%;
   }
-  .Home_5_contact p:nth-of-type(3){
+  .Home_5_contact p:nth-of-type(3) {
     width: 100%;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 1012px) {
-  .Home_5_left_content{
+  .Home_5_left_content {
     width: 82%;
     margin-left: 29px;
   }
 
-.Home_5_contact p:nth-of-type(3){
-  width: 85%;
-}
-  
+  .Home_5_contact p:nth-of-type(3) {
+    width: 85%;
+  }
 }
 
 /* ----------------------Login----------------------------- */
+
+.Login_container {
+  width: 100vw;
+  height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_inner_container {
+  width: 50%;
+  height: 75%;
+  /* border: 2px solid #e77070; */
+  display: flex;
+  box-shadow: 0px 0px 27px #a08282;
+  width: 768px;
+  height: 559.200px;
+margin: 0 auto;
+}
+.Login_left_content {
+  width: 40%;
+  height: 100%;
+  /* border: 2px solid green; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-primary);
+  background-color: #e77070;
+}
+.login_Welcome_back {
+  font-size: 31px;
+  font-weight: bold;
+  color: white;
+}
+.login_welcome_back_content {
+  /* width:; */
+  font-size: 5px;
+  font-size: 12px;
+  width: 62%;
+  text-align: center;
+  margin-top: 13%;
+  color: white;
+  font-weight: 500;
+}
+.login_signup_button {
+  margin-top: 15%;
+}
+.login_signup_button button {
+  width: 158px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #e77070;
+  color: white;
+  border: 3px solid white;
+  border-radius: 21px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.Login_right_content {
+  width: 60%;
+  height: 100%;
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  font-family: var(--font-primary);
+}
+.login_right_unityworks {
+  /* border: 2px solid black;  */
+  color: #f45959;
+  font-weight: bold;
+  font-size: 23px;
+  align-self: flex-end;
+  margin: 18px;
+}
+.Login_sign_into_unityworks {
+  /* border: 2px solid black; */
+  color: #f45959;
+  font-weight: bold;
+  font-size: 33px;
+
+  margin-top: 47px;
+  margin-bottom: 28px;
+}
+.Login_G_F {
+  display: flex;
+  height: 48px;
+}
+.Login_circle {
+  width: 40px;
+  height: 40px;
+  /* border: 2px solid black; */
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 14px;
+  box-shadow: -2px 2px 5px #a08282;
+  background-color: #faf1f1;
+  font-weight: bold;
+  cursor: pointer;
+}
+.Login_or_use {
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 550;
+}
+.Login_email_password {
+  margin-top: 30px;
+  height: fit-content;
+}
+.Login_email {
+  /* border: 2px solid black; */
+  width: 283px;
+  height: 41px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #d9d9d9;
+  color: #635b5b;
+}
+.Login_email img,
+.Login_password img {
+  width: 29px;
+  height: 21px;
+  margin: 0 10px;
+}
+.Login_email input,
+.Login_password input {
+  background-color: transparent;
+  border: none;
+  width: 215px;
+}
+.Login_email input:focus,
+.Login_password input:focus {
+  outline: none;
+}
+.Login_password {
+  /* border: 2px solid black; */
+  width: 283px;
+  height: 41px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #d9d9d9;
+  color: #635b5b;
+}
+
+.Login_Forgot_password {
+  font-size: 10px;
+  width: auto;
+  padding: 3px 6px;
+  /* border: 2px solid black; */
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0px 0px 9px #a08282;
+}
+
+.login_signup_button_right {
+  margin-top: 21px;
+}
+.login_signup_button_right button {
+  width: 158px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #e77070;
+  color: white;
+  border: 3px solid white;
+  border-radius: 21px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.singup_container{
+  width: 100vw;
+  height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup_right_unityworks{
+color:white
+}
+.signup_right_unityworks_right{
+  color: white;
+  font-size: 23px;
+  align-self: flex-end;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.signup_right_unityworks{
+  color: white;
+    font-weight: bold;
+    font-size: 23px;
+    align-self: flex-end;
+    margin: 18px;
+
+}
+.signup_login__button_right{
+margin: 0px;
+}
+
+@media screen and (max-width: 577px){
+  .Login_left_content{
+    display: none;
+  }
+  .login_inner_container{
+    width: 60%;
+    width: 347px;
+    height: 520px;
+  }
+  .Login_right_content{
+    width: 100%;
+  
+  }
+  .login_right_unityworks{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 577px) and (max-width: 847px) {
+.Login_left_content{
+  display: none;
+}
+.login_inner_container{
+  width: 60%;
+  width: 504px;
+  height: 520px;
+}
+.Login_right_content{
+  width: 100%;
+
+}
+.login_right_unityworks{
+  display: none;
+}
+}
+
+
+

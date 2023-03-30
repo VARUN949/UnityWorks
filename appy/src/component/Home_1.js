@@ -7,7 +7,6 @@ import background from "../images/background.png";
 export default function Home_1() {
   return (
     <div>
-      <Navbar />
       <div className="home-1_container_1">
         <div className="home_1_container_left">
           <div className="home_1_container_left_content">
