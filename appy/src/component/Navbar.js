@@ -1,11 +1,16 @@
 import React from "react";
 import img from "../icons/menu_white.png";
 // import "../abc.css";
+import { Link } from "react-router-dom";
+
+
+
+
 export default function navbar() {
   window.addEventListener("scroll", () => {
     console.log("abc");
 
-    if (window.pageYOffset < 560 && window.innerWidth>1012) {
+    if (window.pageYOffset < 560 && window.innerWidth > 1012) {
       console.log(window.pageYOffset);
       console.log("varun");
       document.getElementById("navbar_id").style.background =
@@ -25,7 +30,7 @@ export default function navbar() {
         <div className="nav-items">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/Home">Home</a>
             </li>
             <li>
               <a href="/">Program</a>
@@ -40,8 +45,16 @@ export default function navbar() {
         </div>
         <div className="login_menu">
           <div className="login-buttons">
-            <button className="button1">Login</button>
-            <button className="button2">Sign Up</button>
+            <Link to="/Login" className="Login-buttons_Link">
+              <button className="button1" type="submit">
+                Login
+              </button>
+            </Link>
+            <Link to="/" className="Login-buttons_Link">
+              <button type="submit" className="button2">
+                Sign Up
+              </button>
+            </Link>
           </div>
           <div className="menu_icon">
             <img src={img} alt="" />
