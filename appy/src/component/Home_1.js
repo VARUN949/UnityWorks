@@ -1,10 +1,28 @@
 import React from "react";
-import Navbar from "./Navbar";
 import background_2 from "../images/background-2.jpg";
 import background_1 from "../images/background-1.jpg";
 import background_3 from "../images/background-3.jpg";
 import background from "../images/background.png";
+import { useEffect } from "react";
+
+
 export default function Home_1() {
+  useEffect(() => {
+      document.getElementById("navbar_id").style.position = "fixed";
+      
+      if(window.location.pathname !== "/Login") {
+        document.getElementsByClassName("login_menu")[0].style.display = "flex";
+        console.log("else")
+        document.getElementById("navbar_id").style.background =
+        "linear-gradient(to left, white 28vw, #CC6767 28vw)"
+    }
+
+    
+  }, []);
+ 
+
+
+
   return (
     <div>
       <div className="home-1_container_1">

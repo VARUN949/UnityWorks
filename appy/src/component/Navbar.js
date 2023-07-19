@@ -2,17 +2,22 @@ import React from "react";
 import img from "../icons/menu_white.png";
 import { Link } from "react-router-dom";
 
+
+
+
 export default function navbar() {
   window.addEventListener("scroll", () => {
     if (window.pageYOffset < 560 && window.innerWidth > 1012) {
-      console.log(window.pageYOffset);
-
+      console.log("nn");
       document.getElementById("navbar_id").style.background =
         "linear-gradient(to left, white 28vw, #CC6767 28vw)";
-    } else if (window.pageYOffset > 560) {
+    } else if (window.location.pathname === "/Login" || window.pageYOffset > 560) {
+      console.log("else if ")
       document.getElementById("navbar_id").style.background = "#CC6767";
     }
   });
+  
+  
 
   return (
     <>
@@ -24,13 +29,13 @@ export default function navbar() {
         <div className="nav-items">
           <ul>
             <li>
-              <Link to="/Home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/">Program</Link>
             </li>
             <li>
-              <Link to="/">Donor</Link>
+              <Link to="/">collention</Link>
             </li>
             <li>
               <Link to="/">Contact</Link>

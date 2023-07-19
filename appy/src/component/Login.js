@@ -2,32 +2,47 @@ import React from "react";
 import { Link } from "react-router-dom";
 import email from "../icons/email.png";
 import password from "../icons/password.png";
-import Navbar from "./Navbar";
 import { useEffect } from "react";
+import "../App.css";
+
 
 export default function Login() {
   useEffect(() => {
-    document.getElementById("navbar_id").style.background = "#CC6767";
-    document.getElementById("navbar_id").style.position = "unset";
-    document.getElementsByClassName("login_menu")[0].style.display = "none";
+      document.getElementById("navbar_id").style.position = "unset";
+      if (window.location.pathname === "/Login") {
+          console.log("lloo")
+          document.getElementById("navbar_id").style.background = "#CC6767";
+          document.getElementsByClassName("login_menu")[0].style.display = "none";
+      }
+      
+    
   }, []);
-
+ 
+    
+    
   const Signup_page = () => {
     console.log("entered");
-    document.getElementById("singup_container_id").style.display = "none";
-    document.getElementById("Login_container_id").style.display = "flex";
+    document.getElementById("left1_40").style.animationName = "op_incre";
+      document.getElementById("right1_60").style.animationName = "op_incre";
+      document.getElementById("left2_40").style.animationName = "op_decre";
+      document.getElementById("right2_60").style.animationName = "op_decre";
+      document.getElementById("Login_slider").style.animationName = "slider_return";
   };
-    const SignIn_page = () => {
-        console.log("entered2");
-    document.getElementById("singup_container_id").style.display = "flex";
-    document.getElementById("Login_container_id").style.display = "none";
+  const SignIn_page = () => {
+    console.log("entered2");
+      document.getElementById("left1_40").style.animationName = "op_decre";
+      document.getElementById("right1_60").style.animationName = "op_decre";
+      document.getElementById("left2_40").style.animationName = "op_incre";
+      document.getElementById("right2_60").style.animationName = "op_incre";
+      document.getElementById("Login_slider").style.animationName = "slider";
+
   };
 
   return (
     <div>
       <div className="Login_container" id="Login_container_id">
         <div className="login_inner_container">
-          <div className="Login_left_content">
+          <div className="Login_left_content " id="left1_40">
             <div className="login_Welcome_back">Welcome Back!</div>
             <div className="login_welcome_back_content">
               To keep connect with ous please login with your personal info
@@ -40,7 +55,7 @@ export default function Login() {
               </Link>
             </div>
           </div>
-          <div className="Login_right_content">
+          <div className="Login_right_content " id="right1_60">
             <div className="login_right_unityworks">UnityWorks</div>
             <div className="Login_sign_into_unityworks">
               Sign in to UnityWorks
@@ -66,18 +81,13 @@ export default function Login() {
             <div className="Login_Forgot_password">Forgot your password?</div>
             <div className="login_signup_button_right">
               <Link to="/" className="">
-                <button type="submit" className="" >
+                <button type="submit" className="">
                   Sign In
                 </button>
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="singup_container" id="singup_container_id">
-        <div className="login_inner_container">
-          <div className="Login_right_content">
+          <div className="Login_right_content "id="left2_40">
             <div className="signup_right_unityworks">UnityWorks</div>
             <div className="Login_sign_into_unityworks">Create Account</div>
             <div className="Login_G_F">
@@ -108,7 +118,7 @@ export default function Login() {
               </Link>
             </div>
           </div>
-          <div className="Login_left_content">
+          <div className="Login_left_content "id="right2_60">
             <div className="signup_right_unityworks_right">UnityWorks</div>
             <div className="login_Welcome_back">Hello, Friend!</div>
             <div className="login_welcome_back_content">
@@ -122,9 +132,12 @@ export default function Login() {
                 </button>
               </Link>
             </div>
-          </div>
+                  </div>
+                <div id="Login_slider"></div>
         </div>
       </div>
+
+      
     </div>
   );
 }

@@ -4,6 +4,7 @@
   --font-primary: "Raleway", sans-serif;
   --color-primary: #ffbaba;
   --margin-for-content: 35px;
+  --animation:1s;
   /* 14px; */
 }
 
@@ -624,7 +625,7 @@ p:nth-child(4) {
   /* border: 2px solid green; */
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .Home_3_our_program_name {
   width: 100%;
@@ -934,6 +935,7 @@ p:nth-child(4) {
   width: 768px;
   height: 559.200px;
 margin: 0 auto;
+position: relative;
 }
 .Login_left_content {
   width: 40%;
@@ -945,7 +947,7 @@ margin: 0 auto;
   justify-content: center;
   align-items: center;
   font-family: var(--font-primary);
-  background-color: #e77070;
+  /* background-color: #e77070; */
 }
 .login_Welcome_back {
   font-size: 31px;
@@ -1129,6 +1131,114 @@ color:white
 margin: 0px;
 }
 
+#left1_40{
+  position: absolute;
+  left: 0px;
+  z-index: 3;
+  /* animation-name: op_decre; */
+  animation-duration: var(--animation);
+  animation-fill-mode: forwards;
+}
+#right1_60{
+position: absolute;
+left: 40%;
+z-index: 1;
+/* animation-name: op_decre; */
+animation-duration: var(--animation);
+animation-fill-mode: forwards;
+}
+
+
+#left2_40{
+position: absolute;
+left: 0px;
+z-index: 0;
+opacity: 0;
+/* animation-name: op_incre; */
+animation-duration: var(--animation);
+animation-fill-mode: forwards;
+}
+#right2_60{
+position: absolute;
+left: 60%;
+z-index: 0;
+opacity: 0;
+/* animation-name: op_incre; */
+animation-duration: var(--animation);
+z-index: 3;
+animation-fill-mode: forwards;
+}
+
+
+
+#Login_slider{
+  background-color: #e77070;
+  position: relative;
+  left: 0px;
+  z-index: 2;
+  width: 40%;
+  height: 100%;
+  /* animation-name:slider ; */
+  animation-duration: var(--animation);
+  animation-fill-mode: forwards;
+
+}
+
+
+@keyframes slider {
+  0% {
+     
+      left: 0%;
+    }
+  
+    100% {
+      left: 60%;
+      
+    }
+}
+@keyframes slider_return {
+  0% {
+     
+      left: 60%;
+    }
+  
+    100% {
+      left: 0%;
+      
+    }
+}
+
+@keyframes op_decre {
+  0% {
+    opacity:1;
+  }
+  50%{
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes op_incre {
+  0% {
+    opacity:0;
+  }
+  50%{
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
 @media screen and (max-width: 577px){
   .Login_left_content{
     display: none;
@@ -1136,13 +1246,16 @@ margin: 0px;
   .login_inner_container{
     width: 60%;
     width: 347px;
-    height: 520px;
+    height: 550px;
   }
   .Login_right_content{
     width: 100%;
   
   }
   .login_right_unityworks{
+    display: none;
+  }
+  #Login_slider{
     display: none;
   }
 }
@@ -1155,13 +1268,16 @@ margin: 0px;
 .login_inner_container{
   width: 60%;
   width: 504px;
-  height: 520px;
+  height: 550px;
 }
 .Login_right_content{
   width: 100%;
 
 }
 .login_right_unityworks{
+  display: none;
+}
+#Login_slider{
   display: none;
 }
 }
